@@ -121,7 +121,7 @@ button {
   height: 100%;
   border: 0;
   border-radius: 0;
-  border-bottom: 1px solid rgba(92, 107, 126, 0.22);
+  border-bottom: 0;
   background: transparent;
   color: var(--ink);
   padding: 0 0 1px;
@@ -135,7 +135,7 @@ button {
 }
 
 .search-box:focus-within .search-input {
-  border-bottom-color: rgba(45, 93, 147, 0.42);
+  border-bottom: 0;
 }
 
 .sync-tools {
@@ -591,4 +591,18 @@ button {
   .card-title {
     font-size: 22px;
   }
+}
+
+
+/* Final override: remove the gray divider line under the title/search area */
+.index-hero {
+  border-bottom: 0 !important;
+}
+
+.search-input {
+  border-bottom: 0 !important;
+}
+
+.search-box:focus-within .search-input {
+  border-bottom: 0 !important;
 }
