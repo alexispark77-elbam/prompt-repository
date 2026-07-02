@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prompt Repository</title>
     <link rel="stylesheet" href="./styles.css" />
+    <style id="remove-gray-line-override">
+      .index-hero,
+      .hero-layout,
+      .hero-copy,
+      .title-row,
+      .search-stack,
+      .search-box,
+      .search-input,
+      .sync-tools {
+        border: 0 !important;
+        border-top: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+        border-left: 0 !important;
+        outline: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .index-hero::before,
+      .index-hero::after,
+      .hero-layout::before,
+      .hero-layout::after,
+      .hero-copy::before,
+      .hero-copy::after,
+      .title-row::before,
+      .title-row::after,
+      .search-stack::before,
+      .search-stack::after,
+      .search-box::before,
+      .search-box::after,
+      .search-input::before,
+      .search-input::after,
+      .sync-tools::before,
+      .sync-tools::after {
+        content: none !important;
+        display: none !important;
+        border: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .search-input:focus,
+      .search-box:focus-within,
+      .search-box:focus-within .search-input {
+        border: 0 !important;
+        border-bottom: 0 !important;
+        outline: 0 !important;
+        box-shadow: none !important;
+      }
+    </style>
   </head>
   <body>
     <div class="page-shell">
