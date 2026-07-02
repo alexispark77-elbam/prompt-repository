@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Repository</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="index-hero" aria-label="site header">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <div class="title-row">
+              <h1>Prompt Repository</h1>
+              <span class="title-by">by ELBAM</span>
+            </div>
+          </div>
+
+          <div class="search-stack" aria-label="search and sheet status">
+            <label class="search-box" for="searchInput">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input
+                id="searchInput"
+                class="search-input"
+                type="search"
+                placeholder="프롬프트 검색..."
+                autocomplete="off"
+              />
+            </label>
+            <div class="sync-tools">
+              <button class="refresh-button" id="refreshButton" type="button">REFRESH</button>
+              <span class="sheet-status" id="sheetStatus">Loading sheet…</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="library-wrap">
+        <section class="filters-panel" aria-label="category area">
+          <div class="filter-group" id="filterGroup" aria-label="category filters">
+            <button class="filter-button active" data-filter="ALL" type="button">ALL</button>
+            <button class="filter-button" data-filter="SLIDE" type="button">SLIDE</button>
+            <button class="filter-button" data-filter="PHOTO" type="button">PHOTO</button>
+            <button class="filter-button" data-filter="TRAVEL" type="button">TRAVEL</button>
+            <button class="filter-button" data-filter="FOOD" type="button">FOOD</button>
+            <button class="filter-button" data-filter="LIFE" type="button">LIFE</button>
+            <button class="filter-button" data-filter="ETC" type="button">ETC</button>
+          </div>
+        </section>
+
+        <section class="cards-grid" id="cardsGrid" aria-label="prompt cards"></section>
+
+        <section class="empty-state hidden" id="emptyState">
+          <h2>표시할 카드가 없습니다.</h2>
+          <p>검색어 또는 카테고리를 바꾸거나, 구글시트 내용을 확인해 주세요.</p>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">PROMPT COPIED</div>
+
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

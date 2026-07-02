@@ -1,0 +1,4 @@
+id,title,category,thumbnail,prompt,tags,published
+slide-sample,Slide Prompt,SLIDE,/images/00001.png,"프레젠테이션 슬라이드용 프롬프트 예시입니다.","slide,presentation",TRUE
+photo-sample,Photo Prompt,PHOTO,/images/00002.png,"사진 스타일 이미지 생성 프롬프트 예시입니다.","photo,image",TRUE
+travel-sample,Travel Prompt,TRAVEL,/images/00003.png,"여행 콘텐츠용 프롬프트 예시입니다.","travel,trip",TRUE
