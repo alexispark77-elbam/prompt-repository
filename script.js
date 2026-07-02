@@ -330,32 +330,33 @@ function createCard(card) {
     img.removeAttribute("src");
   };
 
-  const chip = document.createElement("span");
-  chip.className = "category-chip";
-  chip.textContent = displayCategory(card.category);
+  const favorite = document.createElement("span");
+  favorite.className = "favorite-badge";
+  favorite.setAttribute("aria-hidden", "true");
+  favorite.textContent = "♡";
+
+  thumbWrap.append(img, favorite);
+
+  const body = document.createElement("div");
+  body.className = "card-body";
+
+  const category = document.createElement("div");
+  category.className = "card-category";
+  category.textContent = card.category || "ETC";
 
   const title = document.createElement("h2");
   title.className = "card-title";
   title.textContent = card.name;
   title.title = card.name;
 
-  thumbWrap.append(img, chip, title);
-
-  const footer = document.createElement("div");
-  footer.className = "card-footer";
-
-  const preview = document.createElement("p");
-  preview.className = "prompt-preview";
-  preview.textContent = card.prompt || "프롬프트 내용이 비어 있습니다.";
-
   const copyButton = document.createElement("button");
   copyButton.className = "copy-button";
   copyButton.type = "button";
-  copyButton.textContent = "PROMPT COPY";
+  copyButton.innerHTML = '<span class="copy-icon" aria-hidden="true">▱</span><span>PROMPT COPY</span>';
   copyButton.addEventListener("click", () => copyPrompt(card.prompt));
 
-  footer.append(preview, copyButton);
-  article.append(thumbWrap, footer);
+  body.append(category, title, copyButton);
+  article.append(thumbWrap, body);
 
   return article;
 }
