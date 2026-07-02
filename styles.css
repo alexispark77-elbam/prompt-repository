@@ -606,3 +606,61 @@ button {
 .search-box:focus-within .search-input {
   border-bottom: 0 !important;
 }
+
+
+/* Strong line removal around header/search area */
+.index-hero,
+.hero-layout,
+.hero-copy,
+.title-row,
+.search-stack,
+.search-box,
+.search-input,
+.sync-tools {
+  border: 0 !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.index-hero::before,
+.index-hero::after,
+.hero-layout::before,
+.hero-layout::after,
+.hero-copy::before,
+.hero-copy::after,
+.title-row::before,
+.title-row::after,
+.search-stack::before,
+.search-stack::after,
+.search-box::before,
+.search-box::after,
+.search-input::before,
+.search-input::after,
+.sync-tools::before,
+.sync-tools::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.search-input:focus,
+.search-box:focus-within,
+.search-box:focus-within .search-input {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Keep the category buttons separated only by spacing, not a divider line */
+.library-wrap,
+.filters-panel,
+.filter-group {
+  border-top: 0 !important;
+  box-shadow: none !important;
+}
